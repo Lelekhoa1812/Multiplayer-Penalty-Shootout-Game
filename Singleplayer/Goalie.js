@@ -81,4 +81,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update the scoreboard
         scoreboard.textContent = `You ${score} - ${oppScore} Opponent`;
     };
+
+    // Event listeners for double-click events
+    leftBox.addEventListener('dblclick', () => {
+        let opponentPosition = Math.floor(Math.random() * 3) + 1;
+        handleGameResult(opponentPosition);
+        opponentPosition = null;
+    });
+
+    middleBox.addEventListener('dblclick', () => {
+        let opponentPosition = Math.floor(Math.random() * 3) + 1;
+        handleGameResult(opponentPosition);
+        opponentPosition = null;
+    });
+
+    rightBox.addEventListener('dblclick', () => {
+        let opponentPosition = Math.floor(Math.random() * 3) + 1;
+        handleGameResult(opponentPosition);
+        opponentPosition = null;
+    });
 });
