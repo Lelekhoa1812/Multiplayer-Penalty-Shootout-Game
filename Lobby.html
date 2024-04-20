@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #03211c; 
+            color: #FFF; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .h1 {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .create-code-btn,
+        .enter-code-btn {
+            position: relative;
+            background-color: #ffdb98;
+            color: rgb(0, 34, 70);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .create-code-btn:hover,
+        .enter-code-btn:hover {
+            background-color: #e77171;
+        }
+        .modal {
+            text-align: left;
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            z-index: 1; /* On top of everything else */
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; /* Enable scroll */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black with opacity */
+        }
+        .modal-content {
+            background-color: #1d312e;
+            margin: 15% auto; /* 15% from top, centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+        }
+        #waiting-modal {
+            display: none;
+        }
+        .instruction-btn {
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            background-color: #a198ff;
+            color: rgb(0, 34, 70);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .instruction-btn:hover {
+            background-color: #4b468c;
+        }
+        #penalty-gif {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Penalty Shootout Game</h1>
+
+    <div id="instruction-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is the Penalty shootout game, you will be either a shooter or a goalie to play against your friend. You have 10 seconds to make your decision out-minding your friend. If you are a shooter, drag the ball to score from your left, right side or to the middle, and if you are a goalkeeper, drag the glove to deny the goal from your left, right side or to the middle.</p>
+        </div>
+    </div>
+
+    <div id="invitation" class="invitation">
+        <button id="create-code-btn" class="create-code-btn">Create Invitation Code</button>
+        <button id="enter-code-btn" class="enter-code-btn">Enter Invitation Code</button>
+    </div>
+
+    <div id="waiting-modal" class="modal">
+        <div class="modal-content">
+            <p>Please wait until your opponent enters the room.</p>
+        </div>
+    </div>
+
+    <button id="instruction-btn" class="instruction-btn">Instructions</button>
+
+    <img id="penalty-gif" src="penalty.gif" alt="Penalty GIF">
+
+    <script src="Lobby.js"></script>
+</body>
+</html>
