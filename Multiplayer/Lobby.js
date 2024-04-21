@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to check for match
     function checkForMatch(invitationCode) {
         // Send HTTP POST request to check invitation code
-        return fetch('/check-invitation-code', {
+        return fetch('https://penaltyshootout-nd70803wu-lelekhoa1812s-projects.vercel.app/check-invitation-code', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Display waiting modal
         displayWaitingModal();
         // Send HTTP POST request to create invitation code
-        fetch('/create-invitation-code', {
+        fetch('https://penaltyshootout-nd70803wu-lelekhoa1812s-projects.vercel.app/create-invitation-code', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Display waiting modal
         displayWaitingModal();
         // Send HTTP POST request to check invitation code
-        fetch('/check-invitation-code', {
+        fetch('https://penaltyshootout-nd70803wu-lelekhoa1812s-projects.vercel.app/check-invitation-code', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
