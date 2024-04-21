@@ -39,7 +39,7 @@ app.post('/check-invitation-code', (req, res) => {
     }
 });
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 80;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
