@@ -20,5 +20,5 @@ The game will allow user play against the machine, either as a shooter or a goal
 
 Current PvP mode is not available yet, check up at later update.
 
-Accessible via: https://lelekhoa1812.github.io/Multiplayer-Penalty-Shootout-Game/Lobby.html
+Accessible via: https://lelekhoa1812.github.io/Multiplayer-Penalty-Shootout-Game/
 
