@@ -1,8 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path'); // Import the path module
+const cors = require('cors'); // Import the cors middleware
 
 const app = express();
+// Middleware to enable CORS
+app.use(cors());
 
 // Middleware to parse JSON request bodies
 app.use(bodyParser.json());
@@ -39,7 +42,7 @@ app.post('/check-invitation-code', (req, res) => {
     }
 });
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8081;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
